@@ -1,5 +1,11 @@
 $color_blue: #1EACC7
 $color_red: #FF5656
+
+@mixin btn_hover
+    &:hover
+        background-image: none
+        background-color: $color_blue
+
 *
     font-family: 'Roboto', sans-serif
 
@@ -77,6 +83,7 @@ header
         box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
         border: none
         border-radius: 4px
+        @include btn_hover
 
 .promo
     min-height: 800px
@@ -97,6 +104,7 @@ header
         box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
         border: none
         border-radius: 4px
+        @include btn_hover
 
     .promo_header
         font-weight: 700
@@ -247,6 +255,27 @@ header
             border-radius: 100%
             margin: 0 auto
             cursor: pointer
+            &:before
+                content: ''
+                display: block
+                width: 14px
+                height: 2px
+                background-color: $color_blue
+                transition: 0.3s all
+            &:after
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                content: ''
+                display: block
+                width: 2px
+                height: 14px
+                background-color: $color_blue
+                transition: 0.3s all
+            &:hover
+                &:before, &::after
+                    background-color: $color_red
+                    
 
 .possibility
     min-height: 895px
@@ -276,6 +305,77 @@ header
         line-height: 24px
         text-align: center
         color:#222222
+
+.require
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0px
+    &_title
+        font-weight: 400
+        font-size: 22px
+        color: #1CA8C3
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 20px
+        li
+            position: relative
+            font-weight: 300
+            font-size: 17px
+            line-height: 24px
+            color: #222222
+            margin-bottom: 10px
+            &:before
+                content: ''
+                position: absolute
+                display: block
+                left: -32px
+                top: 3px
+                width: 21px
+                height: 20px
+                background: url('../icons/check_blue.svg') center (center / cover) no-repeat
+    &_descr
+        margin-top: 25px
+        font-weight: 300
+        font-size: 17px
+        line-height: 24px
+        color: #1CA8C3
+    .warning
+        .require_title
+            color: $color_red
+        .require_list
+            li
+                &:before
+                    background: url('../icons/check_red.svg') center (center / cover) no-repeat
+.world
+    position: relative
+    min-height: 720px
+    padding: 48px 0
+    background: url('../img/bg/map.jpg') center (center / cover) no-repeat    
+    .rectangle_white
+        width: 75px
+        height: 25px
+    a
+        position: absolute
+        font-weight: 400
+        font-size: 15px
+        text-align: center
+        text-transform: uppercase
+        color: #1FBAD6
+        bottom: 49px        
+        left: 50%
+        transform: translateX(-50%)
+        &:hover
+            text-decoration: none
+            color: #fff
+
+                    
+
+    
+
+
 
 
 
