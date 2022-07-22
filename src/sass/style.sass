@@ -372,34 +372,45 @@ header
             color: #fff
 footer
     min-height: 155px
-    padding: 15px 21px 11px 21px
+    padding: 15px 21px 39px 21px
 .footer
-    position: relative
+    display: flex 
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 32px
+    > div
+        width: 33%
+        &:nth-child(3)
+            display: flex 
+            justify-content: flex-end
     &_wrapper_icons
-        position: absolute
         display: flex
         justify-content: space-between
-        width: 150px
-        left: 22px
-        bottom: 68px
+        width: 160px
+        margin-top: 20px
         .footer_icon
-            width: 35px
-            height: 35px
+            margin: 0 4px
+            width: 32px
+            height: 32px
             background-color: #070716
             border-radius: 100%
             display: flex
             justify-content: center
             align-items: center
             color: #fff
+            text-decoration: none
     &_line
         width: 301px
         height: 5px
         background-color:#1FBAD6
         margin: 0 auto
-    &_links_main
-        padding: 25px 540px 10px 540px
+    &_links_main        
+        display: block
+        margin: 15px auto
+        padding: 0 10px
+        width: 350px
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         a
             font-weight: 300
             font-size: 15px
@@ -410,9 +421,12 @@ footer
                 text-decoration-thickness: 0.1rem
                     
     &_links_sub
-        padding: 0px 540px 15px 540px
+        display: block
+        margin: 0 auto
+        margin-top: 10px
+        width: 350px
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         a
             font-weight: 300
             font-size: 11px
@@ -422,8 +436,11 @@ footer
                 text-decoration-color:#1FBAD6
                 text-decoration-thickness: 0.1rem
     &_links_lang
+        display: block
+        margin: 0 auto
+        margin-top: 19px
         display: flex
-        justify-content: space-around
+        justify-content: space-between
         a
             display: block
             margin: 0 auto
@@ -435,9 +452,8 @@ footer
                 text-decoration-color:#1FBAD6
                 text-decoration-thickness: 0.1rem
     &_links_img
-        position: absolute
-        right: 22px
-        bottom: 71px
+        margin-top: 20px
+
 
 
 
